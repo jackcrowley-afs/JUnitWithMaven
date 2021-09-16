@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class CharacterTest2 {
+public class CharacterTest {
 
 	static final int TEST_HP = 30;
 
