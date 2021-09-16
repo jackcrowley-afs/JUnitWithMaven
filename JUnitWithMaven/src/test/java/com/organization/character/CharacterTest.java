@@ -22,14 +22,34 @@ public class CharacterTest {
 		
 		Assert.assertEquals(character.getMaxHitPoints(), TEST_HP);
 		
+		Assert.assertEquals(character.getLevel(), Character.STARTING_LEVEL);
+		
 	}
 	
 	@Test
 	public void TestCharacterConstructorWithSpecifiedLevel()
 	{
 		
+		final int LEVEL = 2;
+		
+		Character character = new Character(30, LEVEL);
 		
 		
+		Assert.assertEquals(character.getLevel(), LEVEL);
+		
+		Assert.assertEquals(character.getMaxHitPoints(), TEST_HP);
+		
+	}
+	
+	@Test
+	public void CharacterBelowZeroIsDefeated()
+	{
+		Character character = new Character(TEST_HP);
+		
+		character.setCurrentHitPoints(0);
+		
+		
+		Assert.assertEquals(true, character.isDefeated());
 	}
 
 }

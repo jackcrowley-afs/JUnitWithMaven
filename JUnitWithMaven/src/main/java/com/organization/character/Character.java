@@ -33,6 +33,11 @@ public class Character {
 
 	public void setCurrentHitPoints(int currentHitPoints) {
 		this.currentHitPoints = currentHitPoints;
+		
+		
+		//If current hitpoints are less than or equal to Zero, defeated is true.
+		defeated = (this.currentHitPoints <= 0);
+		
 	}
 
 	public int getMaxHitPoints() {
