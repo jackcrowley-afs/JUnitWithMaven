@@ -5,7 +5,7 @@ public class Character {
 	private int currentHitPoints;
 	private int maxHitPoints;
 	
-	private boolean defeated;
+	private boolean isDefeated;
 	
 	private int level;
 
@@ -16,7 +16,7 @@ public class Character {
 		currentHitPoints = this.maxHitPoints = maxHitPoints;
 		this.level = level;
 		
-		defeated = false;
+		isDefeated = false;
 	}
 	
 	public Character(int maxHitPoints) {
@@ -24,7 +24,7 @@ public class Character {
 		currentHitPoints = this.maxHitPoints = maxHitPoints;
 		this.level = STARTING_LEVEL;
 		
-		defeated = false;
+		isDefeated = false;
 	}
 
 	public int getCurrentHitPoints() {
@@ -36,7 +36,7 @@ public class Character {
 		
 		
 		//If current hitpoints are less than or equal to Zero, defeated is true.
-		defeated = (this.currentHitPoints <= 0);
+		isDefeated = (this.currentHitPoints <= 0);
 		
 	}
 
@@ -57,7 +57,7 @@ public class Character {
 	}
 
 	public boolean isDefeated() {
-		return defeated;
+		return isDefeated;
 	}
 	
 	
